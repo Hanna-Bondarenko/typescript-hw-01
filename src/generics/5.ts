@@ -1,0 +1,16 @@
+export enum UserRole {
+  admin = "admin",
+  editor = "editor",
+  guest = "guest",
+}
+
+// Використовуємо Record
+const RoleDescription: Record<UserRole, string> = {
+  [UserRole.admin]: "Admin User",
+  [UserRole.editor]: "Editor User",
+  [UserRole.guest]: "Guest User",
+};
+
+console.log(RoleDescription[UserRole.admin]); // "Admin User"
+console.log(RoleDescription[UserRole.editor]); // "Editor User"
+console.log(RoleDescription[UserRole.guest]); // "Guest User"
